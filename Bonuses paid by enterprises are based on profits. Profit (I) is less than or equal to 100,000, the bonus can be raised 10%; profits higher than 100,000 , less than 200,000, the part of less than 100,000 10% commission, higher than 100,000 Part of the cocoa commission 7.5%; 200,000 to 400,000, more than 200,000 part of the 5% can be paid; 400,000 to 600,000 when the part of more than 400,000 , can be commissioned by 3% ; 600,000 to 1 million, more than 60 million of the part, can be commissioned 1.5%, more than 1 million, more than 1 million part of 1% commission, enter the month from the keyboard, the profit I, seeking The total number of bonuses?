@@ -1,0 +1,26 @@
+Bonus1 = 100000 * 0.1
+Bonus2 = Bonus1 + 100000 * 0.075
+Bonus3 = Bonus2 + 200000 * 0.05
+Bonus4 = Bonus3 + 200000 * 0.03
+Bonus5 = Bonus4 + 400000 * 0.015
+
+Profit = int(raw_input("Input Monthly Profit I: "))
+if Profit < 100000:
+    Bonus = Profit * 0.1
+    
+elif Profit < 200000:
+    Bonus = Bonus1 + (Profit - 100000) * 0.075
+    
+elif Profit < 400000:
+    Bonus = Bonus2 + (Profit - 200000) * 0.05
+    
+elif Profit < 600000:
+    Bonus = Bonus3 + (Profit - 400000) * 0.03
+    
+elif Profit < 1000000:
+    Bonus = Bonus4 + (Profit - 600000) * 0.015
+    
+else:
+    Bonus = Bonus5 + (Profit - 1000000) * 0.01
+
+print "The total number of bonuses is",Bonus
