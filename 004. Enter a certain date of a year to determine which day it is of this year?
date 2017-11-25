@@ -1,0 +1,28 @@
+Year = int(raw_input("Input Year: "))
+Month = int(raw_input("Input Month: "))
+Day = int(raw_input("Input Day: "))
+
+# Number of days in each month
+days = [31,28,31,30,31,30,31,31,30,31,30,31]
+
+# Discrimnant statement of leap year
+if (Year%4 == 0 and Year%100 != 0) or (Year%400 == 0):
+    days[1] = 29
+
+# Calculation
+sum = Day
+i = 0
+while i < Month-1:
+    sum += days[i]
+    i += 1
+    
+"""
+Use 'if' instead of 'while'
+# Calculation
+sum = Day
+for i in range(0,12):
+    if i < Month-1:
+        sum += days[i]
+"""
+
+print "This is the %sth day of %s" %(sum,Year)
