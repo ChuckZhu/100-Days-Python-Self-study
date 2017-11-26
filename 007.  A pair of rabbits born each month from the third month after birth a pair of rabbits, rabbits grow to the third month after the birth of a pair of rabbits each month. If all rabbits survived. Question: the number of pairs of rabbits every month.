@@ -1,0 +1,7 @@
+a = 0
+b = 1
+
+for month in range(1,13):
+    print "In %dth month, there are %d pairs of rabbits" %(month,b)
+    a,b = b,a+b
+    
