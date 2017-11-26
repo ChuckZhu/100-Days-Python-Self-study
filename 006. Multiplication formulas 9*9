@@ -4,6 +4,10 @@ for i in range(1,10):
     print ''
     
 
+# One line methond:
+
+print('\n'.join([ ' '.join([ "%d*%d=%d" %(y,x,x*y) for y in range(1,x+1)]) for x in range(1,10)]))
+
 
 '''
 Output which wanted:
