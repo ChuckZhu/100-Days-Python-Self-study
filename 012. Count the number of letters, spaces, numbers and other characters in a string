@@ -1,0 +1,14 @@
+string = raw_input("Input string: ")
+letters = space = number = others = 0
+
+for word in string:
+    if word.isalpha():
+        letters += 1
+    elif word.isspace():
+        space += 1
+    elif word.isdigit():
+        number += 1
+    else:
+        others += 1
+        
+print "There are %d letters, %d space, %d number, %d others" %(letters,space,number,others)
