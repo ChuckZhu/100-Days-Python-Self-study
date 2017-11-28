@@ -1,0 +1,16 @@
+'''
+Like input a = 2, n = 5.  
+2+22+222+2222+22222
+'''
+
+from sys import stdout
+n = int(raw_input("Input the number: "))
+a = int(raw_input("Input a: "))
+
+s = 0
+
+for i in range(n):
+    s += a
+    a = a*10
+    stdout.write('\n')
+    stdout.write(str(s))
