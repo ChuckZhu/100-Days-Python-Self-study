@@ -1,0 +1,16 @@
+'''
+Drop a ball from 100 metters high, it will trace back half of previous height, 
+figure out total distance after 10th tough ground and the 10th trace back distance
+'''
+
+
+def bounce(height,times):
+    sum_height = height
+    for i in range(times-1):
+        sum_height += height
+        height = height * 0.5
+
+        
+    print 'Total of road is %f' % sum_height
+    print 'The tenth is %f meter' % (height/2)
+bounce(100,10)
