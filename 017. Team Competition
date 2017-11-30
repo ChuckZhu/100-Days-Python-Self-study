@@ -1,0 +1,14 @@
+'''
+2 teams, one with member a,b,c; another with member x,y,z. a won't match with x, c won't match with x,z. Figur out the match lists.
+
+chr(65) = ord('A')
+'''
+
+
+for i in range(ord('x'),ord('z') + 1):
+    for j in range(ord('x'),ord('z') + 1):
+        if i != j:
+            for k in range(ord('x'),ord('z') + 1):
+                if (i != k) and (j != k):
+                    if (i != ord('x')) and (k != ord('x')) and (k != ord('z')):
+                        print 'order is a -- %s\t b -- %s\tc--%s' % (chr(i),chr(j),chr(k))
