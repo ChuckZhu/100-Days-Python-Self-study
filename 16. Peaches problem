@@ -1,0 +1,9 @@
+'''
+A monkey eat half of the peach and one more evaryday, until he found there are only 1 left at 10th day before he ate it. 
+Figure our how many he had befor he ate.
+'''
+
+num_peach = 1
+for i in range(9):
+    num_peach = (num_peach + 1) * 2
+print num_peach
